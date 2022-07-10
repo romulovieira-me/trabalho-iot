@@ -1,0 +1,17 @@
+curl -iX POST \
+  --url 'http://localhost:1026/v2/subscriptions' \
+  --header 'content-type: application/json' \
+  --data '{
+  "description": "Subscription do atuador 1",
+  "subject": {
+    "entities": [{"id": "urn:ngsi-ld:Atuador001", "type": "Atuador"}],
+    "condition": {
+      "attrs": [ "count" ]
+    }
+  },
+  "notification": {
+    "http": {
+      "url": "http://localhost:3000/subscription/mudanca-temperatura"
+    }
+  }
+}'

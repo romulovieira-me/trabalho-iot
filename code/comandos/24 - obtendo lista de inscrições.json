@@ -1,0 +1,4 @@
+6.3.1) Obtendo lista de todas as inscrições
+
+curl -X GET \
+  --url 'http://localhost:1026/v2/subscriptions'

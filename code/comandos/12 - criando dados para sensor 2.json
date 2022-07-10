@@ -1,0 +1,4 @@
+curl -iX POST \
+  'http://localhost:7896/iot/d?k=4jggokgpepnvsb2uv4s40d59ov&i=temperatura002' \
+  -H 'Content-Type: text/plain' \
+  -d 'c|45'

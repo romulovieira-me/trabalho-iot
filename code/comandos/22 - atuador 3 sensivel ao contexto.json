@@ -1,0 +1,18 @@
+curl -iX POST \
+  --url 'http://localhost:1077/v2/subscriptions' \
+  --header 'content-type: application/json' \
+  --data '{
+  "description": "Subscription do atuador 3",
+  "subject": {
+    "entities": [{"id": "urn:ngsi-ld:Atuador:003", "type": "Atuador"}],
+    "condition": {
+      "attrs": [ "count" ]
+      "expression": ["q": "count>60; refTemperatura==urn:ngsi-ld:Temperatura:003" ]
+    }
+  },
+  "notification": {
+    "http": {
+      "url": "http://tutorial:1077/subscription/mudanca-temperatura"
+    }
+  }
+}'

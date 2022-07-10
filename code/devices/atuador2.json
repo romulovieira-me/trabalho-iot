@@ -1,0 +1,23 @@
+{
+    "devices": [
+      {
+        "device_id": "Atuador002",
+        "entity_name": "urn:ngsi-ld:Atuador:002",
+        "entity_type": "Atuador",
+        "protocol": "PDI-IoTA-UltraLight",
+        "transport": "HTTP",
+        "endpoint": "http://iot-sensors:3010/iot/Atuador002",
+        "commands": [
+          {"name": "on","type": "command"},
+          {"name": "off","type": "command"}
+         ],
+         "attributes": [
+          {"object_id": "s", "name": "state", "type":"Text"},
+          {"object_id": "l", "name": "luminosity", "type":"Integer"}
+         ],
+         "static_attributes": [
+           {"name":"refTemperatura", "type": "Relationship","value": "urn:ngsi-ld:Temperatura:002"}
+        ]
+      }
+    ]
+  }

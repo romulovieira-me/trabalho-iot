@@ -1,0 +1,4 @@
+curl -iX POST \
+  'http://localhost:7896/iot/json?k=4jggokgpepnvsb2uv4s40d59ov&i=Temperatura001' \
+  -H 'Content-Type: application/json' \
+  -d 'c|24'

@@ -1,0 +1,2 @@
+curl -X DELETE \
+  --url 'http://localhost:1026/v2/subscriptions/

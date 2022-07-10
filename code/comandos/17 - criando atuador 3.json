@@ -1,0 +1,29 @@
+curl -iX POST \
+  'http://localhost:4041/iot/devices' \
+  -H 'Content-Type: application/json' \
+  -H 'fiware-service: openiot' \
+  -H 'fiware-servicepath: /' \
+  -d '{
+  "devices": [
+    {
+      "device_id": "Atuador003",
+      "entity_name": "urn:ngsi-ld:Atuador:003",
+      "entity_type": "Atuador",
+      "protocol": "PDI-IoTA-UltraLight",
+      "transport": "HTTP",
+      "endpoint": "http://iot-sensors:3010/iot/Atuador003",
+      "commands": [
+        {"name": "on","type": "command"},
+        {"name": "off","type": "command"}
+       ],
+       "attributes": [
+        {"object_id": "s", "name": "state", "type":"Text"},
+        {"object_id": "l", "name": "luminosity", "type":"Integer"}
+       ],
+       "static_attributes": [
+         {"name":"refTemperatura", "type": "Relationship","value": "urn:ngsi-ld:Temperatura:003"}
+      ]
+    }
+  ]
+}
+'

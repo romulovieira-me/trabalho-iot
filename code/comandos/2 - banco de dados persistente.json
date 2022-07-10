@@ -1,0 +1,1 @@
+docker run --name bancodadosmongodb -v /home/romulo/mongodata:/data/db -d mongo

@@ -1,0 +1,22 @@
+curl -iX POST \
+  'http://localhost:4041/iot/devices' \
+  -H 'Content-Type: application/json' \
+  -H 'fiware-service: openiot' \
+  -H 'fiware-servicepath: /' \
+  -d '{
+ "devices": [
+   {
+     "device_id":   "temperatura003",
+     "entity_name": "urn:ngsi-ld:Temperatura:003",
+     "entity_type": "Temperatura",
+     "timezone":    "America/Rio de Janeiro",
+     "attributes": [
+       { "object_id": "c", "name": "count", "type": "Float" }
+     ],
+     "static_attributes": [
+       { "name":"refFermentador", "type": "Relationship", "value": "urn:ngsi-ld:Fermentador:003"}
+     ]
+   }
+ ]
+}
+'
